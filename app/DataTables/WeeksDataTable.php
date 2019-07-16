@@ -48,7 +48,7 @@ class WeeksDataTable extends DataTable
         $html =  $this->builder()
          ->columns($this->getColumns())
          ->ajax('')
-         ->parameters($this->getCustomBuilderParameters([1, 2, 3], [], GetLanguage() == 'ar'));
+         ->parameters($this->getCustomBuilderParameters([1, 2], [], GetLanguage() == 'ar'));
         return $html;
     }
 
@@ -80,20 +80,12 @@ class WeeksDataTable extends DataTable
                  'width'          => '150px',
              ],
              [
-                 'name' => "weeks.desc",
-                 'data'    => 'desc',
-                 'title'   => trans('main.desc'),
+                 'name' => "weeks.week_num",
+                 'data'    => 'week_num',
+                 'title'   => trans('main.week_num'),
                  'searchable' => true,
                  'orderable'  => true,
                  'width'          => '150px',
-             ],
-             [
-                 'name' => "weeks.need",
-                 'data'    => 'need',
-                 'title'   => trans('main.need'),
-                 'searchable' => true,
-                 'orderable'  => true,
-                 'width'          => '200px',
              ],
              [
                  'name' => 'show',

@@ -92,8 +92,7 @@ class WeeksController extends Controller
     {
         $week = Week::find($id);
         $week->name = $request->name;
-        $week->slug = $request->slug;
-        $week->desc = $request->desc;
+        $week->week_num = $request->week_num;      
         $week->need = $request->need;
         $week->save();
 

@@ -53,12 +53,7 @@
                             <strong>{{trans('main.email')}} : </strong>
                             <a href="mailto:{{ $show->email }}">{{ $show->email }}</a>
                             <br><hr>
-                        </div>
-                        <div class="col-md-6">
-                            <strong>{{trans('main.type')}} : </strong>
-                            {{ trans('main.' . $show->type) }}
-                            <br><hr>
-                        </div>
+                        </div>                        
                         <div class="col-md-6">
                             <strong>{{trans('main.phone')}} : </strong>
                             {{ trans( $show->phone) }}

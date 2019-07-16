@@ -17,9 +17,8 @@ class CreateWeeksTable extends Migration
         Schema::create('weeks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('slug');
-            $table->longText('desc');
             $table->string('need')->nullable();
+            $table->integer('week_num');
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints(); // For Forgen Key Checks Enable

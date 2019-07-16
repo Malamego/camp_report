@@ -131,8 +131,7 @@ class StatisticsController extends Controller
         $statis->ob4              = $request->ob4;
         $statis->ob5              = $request->ob5;
         $statis->ob6              = $request->ob6;
-        $statis->papers           = $request->papers;
-        $statis->stu_num          = $request->stu_num;
+        $statis->papers           = $request->papers;      
         $statis->holy_spirit      = $request->holy_spirit;
         $statis->mission_no_student = $request->mission_no_student;
         $statis->mission_all      = $request->mission_all;

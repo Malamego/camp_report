@@ -750,7 +750,7 @@ return [
     'answer'                       => 'Answer',
     'true'                         => 'True',
     'false'                        => 'False',
-    'score'                        => 'Score',
+    'score'                        => 'Students Numbers',
     'login_error'                  => 'Login Error',
     'identity'                     => 'Identity',
     'no_answers'                   => ' There Is No Answers For This Question ',
@@ -773,10 +773,10 @@ return [
     'observation4'                 => 'Fourth Observation',
     'observation5'                 => 'Fifth Observation',
     'observation6'                 => 'Sixth Observation',
-    'papers'                       => 'distribution',
-    'stu_num'                      => 'Students Numbers',
+    'papers'                       => 'distribution',    
     'holy_spirit'                  => 'Holy Spirit',
     'mission_no_student'           => 'Mission For No student',
     'mission_all'                  => 'Mission For All',
+    'week_num'                     => 'Week Number',
 
 ];

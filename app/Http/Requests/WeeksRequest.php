@@ -25,9 +25,8 @@ class WeeksRequest extends FormRequest
     {
         return [
             'name'     => 'required',
-            'slug'     => 'sometimes|nullable',
-            'desc'     => 'nullable',
-            'need'    => 'sometimes|nullable',
+            'week_num'     => 'required',
+            'need'    => 'nullable',
         ];
     }
 
@@ -36,9 +35,8 @@ class WeeksRequest extends FormRequest
     {
         return [
             'name'       => trans('main.name'),
-            'slug'       => trans('main.slug'),
-            'desc'       => trans('main.description'),
-            'need'      => trans('main.need'),
+            'week_num'       => trans('main.week_num'),
+            // 'need'      => trans('main.need'),
 
         ];
     }

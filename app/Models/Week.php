@@ -11,7 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 class Week extends Model
 {
     protected $fillable = [
-        'name','slug', 'desc', 'need'
+        'name', 'week_num', 'need'
     ];
 
     public function details_relation()

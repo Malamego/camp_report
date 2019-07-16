@@ -112,15 +112,15 @@
         </div>
 <!-- Add by Mario for ID Number -->
         <div class="form-group{{ $errors->has('identity') ? ' has-error' : '' }}">
-            <label class="col-md-2 control-label">{{ trans('main.identity') }} <span class="required"></span> </label>
+            <label class="col-md-2 control-label">{{ trans('main.identity') }} </label>
             <div class="col-md-10">
-                <input type="text" name="identity" value="{{ getData($data, 'identity') }}" class="form-control" placeholder="{{ trans('main.identity') }}" required>
+                <input type="text" name="identity" value="{{ getData($data, 'identity') }}" class="form-control" placeholder="{{ trans('main.identity') }}" >
                 @if ($errors->has('identity'))
                     <span class="help-block">
                         <strong class="help-block">{{ $errors->first('identity') }}</strong>
                     </span>
                 @endif
             </div>
-        </div>
+        </div>      
 
 </div>

@@ -116,11 +116,11 @@ class StudentsController extends Controller
         $student->imei = $request->imei;
         $student->class_id = $request->class_id;
         $student->user_id = $request->user_id;
-
+        $student->identity = $request->identity;
         if ($request->hasFile('image')) {
             $student->image = Helper::UploadUpdate($student->image ?? null, 'students', $request->file('image'), 'checkImages');
         }
-        $student->save();        
+        $student->save();
 
         session()->flash('success', trans('main.updated'));
         return redirect()->route('students.show', [$student->id]);

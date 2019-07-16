@@ -48,7 +48,7 @@ class StatisticsDataTable extends DataTable
         $html =  $this->builder()
          ->columns($this->getColumns())
          ->ajax('')
-         ->parameters($this->getCustomBuilderParameters([1], [], GetLanguage() == 'ar'));
+         ->parameters($this->getCustomBuilderParameters([1,2,3,4,5,6,7,8,9,10,11,12,13], [], GetLanguage() == 'ar'));
 
         return $html;
     }
@@ -78,7 +78,7 @@ class StatisticsDataTable extends DataTable
                  'title'   => trans('main.teacher'),
                  'searchable' => true,
                  'orderable'  => true,
-                 'width'          => '100px',
+                 'width'          => '50px',
              ],
              // [
              //     'name' => "statistics.title",
@@ -104,54 +104,90 @@ class StatisticsDataTable extends DataTable
                  'orderable'  => true,
                  'width'          => '1px',
              ],
-             // [
-             //     'name' => "statistics.ob1",
-             //     'data'    => 'ob1',
-             //     'title'   => trans('main.observation1'),
-             //     'searchable' => true,
-             //     'orderable'  => true,
-             //     'width'          => '1px',
-             // ],
-             // [
-             //     'name' => "statistics.ob2",
-             //     'data'    => 'ob2',
-             //     'title'   => trans('main.observation2'),
-             //     'searchable' => true,
-             //     'orderable'  => true,
-             //     'width'          => '1px',
-             // ],
-             // [
-             //     'name' => "statistics.ob3",
-             //     'data'    => 'ob3',
-             //     'title'   => trans('main.observation3'),
-             //     'searchable' => true,
-             //     'orderable'  => true,
-             //     'width'          => '1px',
-             // ],
-             // [
-             //     'name' => "statistics.ob4",
-             //     'data'    => 'ob4',
-             //     'title'   => trans('main.observation4'),
-             //     'searchable' => true,
-             //     'orderable'  => true,
-             //     'width'          => '1px',
-             // ],
-             // [
-             //     'name' => "statistics.ob5",
-             //     'data'    => 'ob5',
-             //     'title'   => trans('main.observation5'),
-             //     'searchable' => true,
-             //     'orderable'  => true,
-             //     'width'          => '1px',
-             // ],
-             // [
-             //     'name' => "statistics.ob6",
-             //     'data'    => 'ob6',
-             //     'title'   => trans('main.observation6'),
-             //     'searchable' => true,
-             //     'orderable'  => true,
-             //     'width'          => '1px',
-             // ],
+
+             [
+                 'name' => "statistics.ob1",
+                 'data'    => 'ob1',
+                 'title'   => trans('main.observation1'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.ob2",
+                 'data'    => 'ob2',
+                 'title'   => trans('main.observation2'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.ob3",
+                 'data'    => 'ob3',
+                 'title'   => trans('main.observation3'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.ob4",
+                 'data'    => 'ob4',
+                 'title'   => trans('main.observation4'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.ob5",
+                 'data'    => 'ob5',
+                 'title'   => trans('main.observation5'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.ob6",
+                 'data'    => 'ob6',
+                 'title'   => trans('main.observation6'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+
+             [
+                 'name' => "statistics.papers",
+                 'data'    => 'papers',
+                 'title'   => trans('main.papers'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.holy_spirit",
+                 'data'    => 'holy_spirit',
+                 'title'   => trans('main.holy_spirit'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.mission_no_student",
+                 'data'    => 'mission_no_student',
+                 'title'   => trans('main.mission_no_student'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+             [
+                 'name' => "statistics.mission_all",
+                 'data'    => 'mission_all',
+                 'title'   => trans('main.mission_all'),
+                 'searchable' => true,
+                 'orderable'  => true,
+                 'width'          => '1px',
+             ],
+
+
 
              [
                  'name' => 'show',

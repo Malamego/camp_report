@@ -105,11 +105,6 @@
                             <br><hr>
                         </div>
                         <div class="col-md-6">
-                            <strong>{{trans('main.stu_num')}} : </strong>
-                            {{ trans( $show->stu_num) }}
-                            <br><hr>
-                        </div>
-                        <div class="col-md-6">
                             <strong>{{trans('main.holy_spirit')}} : </strong>
                             {{ trans( $show->holy_spirit) }}
                             <br><hr>

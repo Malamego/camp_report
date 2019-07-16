@@ -110,7 +110,7 @@
     </div>
 
     <div class="form-group{{ $errors->has('content') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.notes') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.notes') }} </label>
         <div class="col-md-10">
             <textarea name="content" class="form-control" placeholder="{{ trans('main.notes') }}">{{ getData($data, 'content') }}</textarea>
             @if ($errors->has('content'))
@@ -122,9 +122,9 @@
     </div>
  <!-- الكرازة -->
     <div class="form-group{{ $errors->has('mission') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.mission') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.mission') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="mission"  value="{{ getData($data, 'mission') }}" class="form-control" placeholder="{{ trans('main.mission') }}" required>
+            <input type="number" name="mission"  value="{{ getData($data, 'mission') }}" class="form-control" placeholder="{{ trans('main.mission') }}" >
             @if ($errors->has('mission'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('mission') }}</strong>
@@ -134,9 +134,9 @@
     </div>
 <!-- القرار -->
     <div class="form-group{{ $errors->has('decision') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.decision') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.decision') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="decision"  value="{{ getData($data, 'decision') }}" class="form-control" placeholder="{{ trans('main.decision') }}" required>
+            <input type="number" name="decision"  value="{{ getData($data, 'decision') }}" class="form-control" placeholder="{{ trans('main.decision') }}" >
             @if ($errors->has('decision'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('decision') }}</strong>
@@ -146,9 +146,9 @@
     </div>
 <!-- متابعة اولى -->
     <div class="form-group{{ $errors->has('ob1') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.observation1') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.observation1') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="ob1"  value="{{ getData($data, 'ob1') }}" class="form-control" placeholder="{{ trans('main.observation1') }}" required>
+            <input type="number" name="ob1"  value="{{ getData($data, 'ob1') }}" class="form-control" placeholder="{{ trans('main.observation1') }}" >
             @if ($errors->has('ob1'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('ob1') }}</strong>
@@ -158,9 +158,9 @@
     </div>
  <!-- مُتابعة ثانية -->
     <div class="form-group{{ $errors->has('ob2') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.observation2') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.observation2') }} </label>
         <div class="col-md-6">
-            <input type="number" name="ob2"  value="{{ getData($data, 'ob2') }}" class="form-control" placeholder="{{ trans('main.observation2') }}" required>
+            <input type="number" name="ob2"  value="{{ getData($data, 'ob2') }}" class="form-control" placeholder="{{ trans('main.observation2') }}" >
             @if ($errors->has('ob2'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('ob2') }}</strong>
@@ -170,9 +170,9 @@
     </div>
  <!-- مُتابعة ثالثة -->
     <div class="form-group{{ $errors->has('ob3') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.observation3') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.observation3') }} </label>
         <div class="col-md-6">
-            <input type="number" name="ob3"  value="{{ getData($data, 'ob3') }}" class="form-control" placeholder="{{ trans('main.observation3') }}" required>
+            <input type="number" name="ob3"  value="{{ getData($data, 'ob3') }}" class="form-control" placeholder="{{ trans('main.observation3') }}" >
             @if ($errors->has('ob3'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('ob3') }}</strong>
@@ -182,9 +182,9 @@
     </div>
  <!-- مُتابعة رابعة -->
     <div class="form-group{{ $errors->has('ob4') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.observation4') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.observation4') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="ob4"  value="{{ getData($data, 'ob4') }}" class="form-control" placeholder="{{ trans('main.observation4') }}" required>
+            <input type="number" name="ob4"  value="{{ getData($data, 'ob4') }}" class="form-control" placeholder="{{ trans('main.observation4') }}" >
             @if ($errors->has('ob4'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('ob4') }}</strong>
@@ -194,9 +194,9 @@
     </div>
  <!-- مُتابعة خامسة -->
     <div class="form-group{{ $errors->has('ob5') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.observation5') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.observation5') }} </label>
         <div class="col-md-6">
-            <input type="number" name="ob5"  value="{{ getData($data, 'ob5') }}" class="form-control" placeholder="{{ trans('main.observation5') }}" required>
+            <input type="number" name="ob5"  value="{{ getData($data, 'ob5') }}" class="form-control" placeholder="{{ trans('main.observation5') }}" >
             @if ($errors->has('ob5'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('ob5') }}</strong>
@@ -206,9 +206,9 @@
     </div>
  <!-- مُتابعة سادسة -->
     <div class="form-group{{ $errors->has('ob6') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.observation6') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.observation6') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="ob6"  value="{{ getData($data, 'ob6') }}" class="form-control" placeholder="{{ trans('main.observation6') }}" required>
+            <input type="number" name="ob6"  value="{{ getData($data, 'ob6') }}" class="form-control" placeholder="{{ trans('main.observation6') }}" >
             @if ($errors->has('ob6'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('ob6') }}</strong>
@@ -218,9 +218,9 @@
     </div>
 
     <div class="form-group{{ $errors->has('papers') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.papers') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.papers') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="papers"  value="{{ getData($data, 'papers') }}" class="form-control" placeholder="{{ trans('main.papers') }}" required>
+            <input type="number" name="papers"  value="{{ getData($data, 'papers') }}" class="form-control" placeholder="{{ trans('main.papers') }}" >
             @if ($errors->has('papers'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('papers') }}</strong>
@@ -229,22 +229,10 @@
         </div>
     </div>
 
-    <div class="form-group{{ $errors->has('stu_num') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.stu_num') }} <span class="required"></span> </label>
-        <div class="col-md-6">
-            <input type="number" name="stu_num"  value="{{ getData($data, 'stu_num') }}" class="form-control" placeholder="{{ trans('main.stu_num') }}" required>
-            @if ($errors->has('stu_num'))
-                <span class="help-block">
-                    <strong class="help-block">{{ $errors->first('stu_num') }}</strong>
-                </span>
-            @endif
-        </div>
-    </div>
-
     <div class="form-group{{ $errors->has('holy_spirit') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.holy_spirit') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.holy_spirit') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="holy_spirit"  value="{{ getData($data, 'holy_spirit') }}" class="form-control" placeholder="{{ trans('main.holy_spirit') }}" required>
+            <input type="number" name="holy_spirit"  value="{{ getData($data, 'holy_spirit') }}" class="form-control" placeholder="{{ trans('main.holy_spirit') }}" >
             @if ($errors->has('holy_spirit'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('holy_spirit') }}</strong>
@@ -254,9 +242,9 @@
     </div>
 
     <div class="form-group{{ $errors->has('mission_no_student') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.mission_no_student') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.mission_no_student') }}  </label>
         <div class="col-md-6">
-            <input type="number" name="mission_no_student"  value="{{ getData($data, 'mission_no_student') }}" class="form-control" placeholder="{{ trans('main.mission_no_student') }}" required>
+            <input type="number" name="mission_no_student"  value="{{ getData($data, 'mission_no_student') }}" class="form-control" placeholder="{{ trans('main.mission_no_student') }}" >
             @if ($errors->has('mission_no_student'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('mission_no_student') }}</strong>
@@ -267,9 +255,9 @@
 
 
     <div class="form-group{{ $errors->has('mission_all') ? ' has-error' : '' }}">
-        <label class="col-md-2 control-label">{{ trans('main.mission_all') }} <span class="required"></span> </label>
+        <label class="col-md-2 control-label">{{ trans('main.mission_all') }} </label>
         <div class="col-md-6">
-            <input type="number" name="mission_all"  value="{{ getData($data, 'mission_all') }}" class="form-control" placeholder="{{ trans('main.mission_all') }}" required>
+            <input type="number" name="mission_all"  value="{{ getData($data, 'mission_all') }}" class="form-control" placeholder="{{ trans('main.mission_all') }}" >
             @if ($errors->has('mission_all'))
                 <span class="help-block">
                     <strong class="help-block">{{ $errors->first('mission_all') }}</strong>

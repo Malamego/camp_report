@@ -31,6 +31,7 @@ class StudentsRequest extends FormRequest
             'user_id'  => 'required|exists:users,id',
             'imei'    => 'required|min:14',
             // 'type'     => 'required|in:student,admin',
+            'identity'    => 'nullable',
             'image'     => 'sometimes|image',
         ];
 
@@ -51,6 +52,7 @@ class StudentsRequest extends FormRequest
             // 'type'     => trans('main.type'),
             'class_id'     => trans('main.class_id'),
             'imei'     => trans('main.imei'),
+            'identity'     => trans('main.identity'),
         ];
     }
 }
