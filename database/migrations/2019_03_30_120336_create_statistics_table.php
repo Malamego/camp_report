@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStatisticsTable extends Migration
+class CreateSheet2statisticsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -28,7 +28,7 @@ class CreateStatisticsTable extends Migration
             $table->integer('ob4')->nullable();               // عدد الناس اللي اتعمل معاهم متابعة رابعة
             $table->integer('ob5')->nullable();               // عدد الناس اللي اتعمل معاهم متابعة خامسة
             $table->integer('ob6')->nullable();              // عدد الناس اللي اتعمل معاهم متابعة سادسة
-            $table->integer('papers')->nullable();             // التوزيع          
+            $table->integer('papers')->nullable();             // التوزيع
             $table->integer('holy_spirit')->nullable();        // الروح القدس
             $table->integer('mission_no_student')->nullable();  // كرازة لغير الطلبة
             $table->integer('mission_all')->nullable();          // كرازة جماعية

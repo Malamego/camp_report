@@ -106,6 +106,26 @@
                      </li>
                  </ul>
              </li>
+ <!-- Add statistics for sheet2 -->
+             <li class="nav-item  {{ active_route('sheet2statistics.*') }}">
+                 <a href="javascript:;" class="nav-link nav-toggle">
+                     <i class="icon-users"></i>
+                     <span class="title">{{ trans('main.sheet2statistics') }}</span>
+                     <span class="arrow"></span>
+                 </a>
+                 <ul class="sub-menu">
+                     <li class="nav-item {{ active_route('sheet2statistics.create') }}">
+                         <a href="{{ route('sheet2statistics.create') }}" class="nav-link ">
+                             <span class="title">{{ trans('main.add') }} {{ trans('main.statis') }}</span>
+                         </a>
+                     </li>
+                     <li class="nav-item {{ active_route('sheet2statistics.index') }}">
+                         <a href="{{ route('sheet2statistics.index') }}" class="nav-link ">
+                             <span class="title">{{ trans('main.show-all') }} {{ trans('main.sheet2statistics') }}</span>
+                         </a>
+                     </li>
+                 </ul>
+             </li>
 
 
              <!-- Add Student  (Add by Mario) -->
