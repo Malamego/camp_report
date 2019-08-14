@@ -37,7 +37,7 @@ class Sheet2statisticsController extends Controller
         $we = Week::all();
         $st = Student::all();
         return view("{$this->viewPath}.create", [
-            'title' => trans('main.add') . ' ' . trans('main.sheet2sheet2statistics'),
+            'title' => trans('main.add') . ' ' . trans('main.sheet2statistics'),
             'we' => $we,
             'st' => $st,
         ]);
