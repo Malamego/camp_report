@@ -36,10 +36,19 @@ Route::middleware(\App\Http\Middleware\LangMiddleware::class)->group(function ()
     Route::resource('sheet2statistics', 'Sheet2statisticsController');
     Route::post('sheet2statistics/multi_delete', 'Sheet2statisticsController@multi_delete')->name('sheet2statistics.multi_delete');
 
+    // statistics4DS
+    Route::resource('statistics4ds', 'Statistics4dsController');
+    Route::post('statistics4ds/multi_delete', 'Statistics4dsController@multi_delete')->name('statistics4ds.multi_delete');
+
 
     // classes
     Route::resource('classes', 'ClassesController');
     Route::post('classes/multi_delete', 'ClassController@multi_delete')->name('classes.multi_delete');
+
+
+    // tools
+    Route::resource('tools', 'ToolsController');
+    Route::post('tools/multi_delete', 'ToolsController@multi_delete')->name('tools.multi_delete');
 
     // weeks
     Route::resource('weeks', 'WeeksController');

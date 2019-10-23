@@ -86,11 +86,31 @@
              <li class="heading">
                  <h3 class="uppercase">{{ trans('main.statistics') }}</h3>
              </li>
-
+<!-- statistics for DS -->
+             <li class="nav-item  {{ active_route('statistics4ds.*') }}">
+                 <a href="javascript:;" class="nav-link nav-toggle">
+                     <i class="icon-users"></i>
+                     <span class="title">{{ trans('main.statis4ds') }}</span>
+                     <span class="arrow"></span>
+                 </a>
+                 <ul class="sub-menu">
+                     <li class="nav-item {{ active_route('statistics4ds.create') }}">
+                         <a href="{{ route('statistics4ds.create') }}" class="nav-link ">
+                             <span class="title">{{ trans('main.add') }} {{ trans('main.statis4ds') }}</span>
+                         </a>
+                     </li>
+                     <li class="nav-item {{ active_route('statistics4ds.index') }}">
+                         <a href="{{ route('statistics4ds.index') }}" class="nav-link ">
+                             <span class="title">{{ trans('main.show-all') }} {{ trans('main.statis4ds') }}</span>
+                         </a>
+                     </li>
+                 </ul>
+             </li>
+ <!-- Add statistics for sheet1 for Coo -->
              <li class="nav-item  {{ active_route('statistics.*') }}">
                  <a href="javascript:;" class="nav-link nav-toggle">
                      <i class="icon-users"></i>
-                     <span class="title">{{ trans('main.statistics') }}</span>
+                     <span class="title">{{ trans('main.statistics4college') }}</span>
                      <span class="arrow"></span>
                  </a>
                  <ul class="sub-menu">
@@ -184,7 +204,32 @@
                  </ul>
              </li>
 
-             <!-- Add Course  (Mario Added) -->
+             <!-- Add Tool  (Mario Added) -->
+             <li class="heading">
+                 <h3 class="uppercase">{{ trans('main.tools') }}</h3>
+             </li>
+
+             <li class="nav-item  {{ active_route('tools.*') }}">
+                 <a href="javascript:;" class="nav-link nav-toggle">
+                     <i class="icon-users"></i>
+                     <span class="title">{{ trans('main.tools') }}</span>
+                     <span class="arrow"></span>
+                 </a>
+                 <ul class="sub-menu">
+                     <li class="nav-item {{ active_route('tools.create') }}">
+                         <a href="{{ route('tools.create') }}" class="nav-link ">
+                             <span class="title">{{ trans('main.add') }} {{ trans('main.tool') }}</span>
+                         </a>
+                     </li>
+                     <li class="nav-item {{ active_route('tools.index') }}">
+                         <a href="{{ route('tools.index') }}" class="nav-link ">
+                             <span class="title">{{ trans('main.show-all') }} {{ trans('main.tools') }}</span>
+                         </a>
+                     </li>
+                 </ul>
+             </li>
+
+             <!-- Add Reports  (Mario Added) -->
              <li class="heading">
                  <h3 class="uppercase">{{ trans('main.weeks_reports') }}</h3>
              </li>
