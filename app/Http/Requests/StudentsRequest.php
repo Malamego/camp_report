@@ -24,15 +24,15 @@ class StudentsRequest extends FormRequest
     public function rules()
     {
         $return = [
-            'name'     => 'required',
-            'email'    => 'required|unique:students',
-            'phone'    => 'required|unique:students',
-            'class_id'  => 'required|exists:class_models,id',
-            'user_id'  => 'required|exists:users,id',
-            'imei'    => 'required|min:14',
+            'name'         => 'required',
+            'email'        => 'required|unique:students',
+            'phone'        => 'required|unique:students',
+            'class_id'     => 'required|exists:class_models,id',
+            'user_id'      => 'required|exists:users,id',
+            'imei'         => 'required|min:14',
             // 'type'     => 'required|in:student,admin',
-            'identity'    => 'nullable',
-            'image'     => 'sometimes|image',
+            'identity'     => 'nullable',
+            'image'        => 'sometimes|image',
         ];
 
         if (in_array($this->method(), ['POST', 'PATCH'])) {

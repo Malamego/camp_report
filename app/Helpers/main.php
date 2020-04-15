@@ -71,6 +71,12 @@ function ShowImage($image) : string
 }
 
 /**
+ * Return The Image With Path
+ * @param string $image
+ * @return string $image
+ */
+
+/**
  * userCan description
  * @param  string $permission
  * @return bool

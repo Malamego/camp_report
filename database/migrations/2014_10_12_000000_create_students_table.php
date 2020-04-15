@@ -25,8 +25,30 @@ class CreateStudentsTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('identity')->nullable(); // To know the ٍStudent (ID) Number
-            // $table->enum('type', ['user', 'admin'])->default('user');
+            $table->integer('trinity')->nullable();           //الثالوث
+            $table->integer('incarnation')->nullable();           //التجسد
+            $table->integer('steel')->nullable();           //الصلب
+            $table->integer('misrepresentation')->nullable();           //التحريف
+            $table->integer('biblestory')->nullable();           //قصص كتاب
+            $table->integer('lesson1')->nullable();           //الدرس الاول
+            $table->integer('lesson2')->nullable();
+            $table->integer('lesson3')->nullable();
+            $table->integer('lesson4')->nullable();
+            $table->integer('lesson5')->nullable();
+            $table->integer('lesson6')->nullable();
+            $table->integer('lesson7')->nullable();
+            $table->integer('lesson8')->nullable();
+            $table->integer('lesson9')->nullable();
+            $table->integer('lesson10')->nullable();
+            $table->integer('friendmission')->nullable();       // كرازة لصديق
+            $table->integer('frienddecision')->nullable();      // قرار صديق
+            $table->integer('friendmissiontrain')->nullable();      // تدريب كرازة للاصدقاء
+            $table->integer('friendfollowtrain')->nullable();      // تدريب متابعة للاصدقاء
+            $table->integer('friendstudenttrain')->nullable();      // تدريب تلمذة للاصدقاء
+            $table->integer('friendsubmittrain')->nullable(); // تدريب ارسال للاصدقاء
+
             $table->integer('score')->default(0);
+
             $table->rememberToken();
             $table->timestamps();
         });

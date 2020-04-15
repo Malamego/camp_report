@@ -17,7 +17,7 @@ class CreateSheet2statisticsTable extends Migration
         Schema::create('statistics', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->longtext('content');              // Notes
             $table->date('datenow');                  // تاريخ الاحصائية
             $table->integer('mission')->nullable();              // عدد كرازة

@@ -89,7 +89,7 @@
 
     <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
         <label class="control-label col-md-2">{{ trans('main.image') }}</label>
-        <div class="col-md-6">
+        <div class="col-md-10">
             <div class="fileinput fileinput-new" data-provides="fileinput">
                 <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;">
                     @if (checkValue(getData($data, 'image')))
@@ -264,6 +264,19 @@
         </div>
     </div>
 
+    <!-- أعمال محبة -->
+       <div class="form-group{{ $errors->has('loven') ? ' has-error' : '' }}">
+           <label class="col-md-2 control-label">{{ trans('main.loven') }}  </label>
+           <div class="col-md-6">
+               <input type="number" name="loven"  value="{{ getData($data, 'loven') }}" class="form-control" placeholder="{{ trans('main.observation6') }}" >
+               @if ($errors->has('loven'))
+                   <span class="help-block">
+                       <strong class="help-block">{{ $errors->first('loven') }}</strong>
+                   </span>
+               @endif
+           </div>
+       </div>
+
     <!--  مستوى اول -->
              <div class="form-group{{ $errors->has('level1') ? ' has-error' : '' }}">
                  <label class="col-md-2 control-label">{{ trans('main.level1') }}  </label>
@@ -339,5 +352,250 @@
             @endif
         </div>
     </div>
+ <!-- Add التجسد -->
+    <div class="form-group{{ $errors->has('trinity') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.trinity') }}  </label>
+        <div class="col-md-6">
+            <input type="number" name="trinity"  value="{{ getData($data, 'trinity') }}" class="form-control" placeholder="{{ trans('main.trinity') }}" >
+            @if ($errors->has('trinity'))
+                <span class="help-block">
+                    <strong class="help-block">{{ $errors->first('trinity') }}</strong>
+                </span>
+            @endif
+        </div>
+    </div>
 
+ <!-- Add الثالوث -->
+    <div class="form-group{{ $errors->has('incarnation') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.incarnation') }}  </label>
+        <div class="col-md-6">
+          <input type="number" name="incarnation"  value="{{ getData($data, 'incarnation') }}" class="form-control" placeholder="{{ trans('main.incarnation') }}" >
+            @if ($errors->has('incarnation'))
+              <span class="help-block">
+                <strong class="help-block">{{ $errors->first('incarnation') }}</strong>
+              </span>
+            @endif
+        </div>
+    </div>
+
+ <!-- Add الصلب -->
+    <div class="form-group{{ $errors->has('steel') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.steel') }}  </label>
+          <div class="col-md-6">
+            <input type="number" name="steel"  value="{{ getData($data, 'steel') }}" class="form-control" placeholder="{{ trans('main.steel') }}" >
+                @if ($errors->has('steel'))
+                  <span class="help-block">
+                    <strong class="help-block">{{ $errors->first('steel') }}</strong>
+                  </span>
+                @endif
+          </div>
+        </div>
+
+<!-- Add التحريف -->
+    <div class="form-group{{ $errors->has('misrepresentation') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.misrepresentation') }}  </label>
+          <div class="col-md-6">
+            <input type="number" name="misrepresentation"  value="{{ getData($data, 'misrepresentation') }}" class="form-control" placeholder="{{ trans('main.misrepresentation') }}" >
+              @if ($errors->has('misrepresentation'))
+                  <span class="help-block">
+                      <strong class="help-block">{{ $errors->first('misrepresentation') }}</strong>
+                  </span>
+                @endif
+            </div>
+         </div>
+
+ <!-- Add قصص الكتاب -->
+<div class="form-group{{ $errors->has('biblestory') ? ' has-error' : '' }}">
+    <label class="col-md-2 control-label">{{ trans('main.biblestory') }}  </label>
+      <div class="col-md-6">
+        <input type="number" name="biblestory"  value="{{ getData($data, 'biblestory') }}" class="form-control" placeholder="{{ trans('main.biblestory') }}" >
+            @if ($errors->has('biblestory'))
+              <span class="help-block">
+                <strong class="help-block">{{ $errors->first('biblestory') }}</strong>
+                    </span>
+                      @endif
+                    </div>
+        </div>
+
+<!-- Add الدرس الاول -->
+    <div class="form-group{{ $errors->has('lesson1') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.lesson1') }}  </label>
+          <div class="col-md-6">
+            <input type="number" name="lesson1"  value="{{ getData($data, 'lesson1') }}" class="form-control" placeholder="{{ trans('main.lesson1') }}" >
+                @if ($errors->has('lesson1'))
+                  <span class="help-block">
+                    <strong class="help-block">{{ $errors->first('lesson1') }}</strong>
+                      </span>
+                        @endif
+            </div>
+    </div>
+
+ <!-- Add الدرس الثاني -->
+      <div class="form-group{{ $errors->has('lesson2') ? ' has-error' : '' }}">
+          <label class="col-md-2 control-label">{{ trans('main.lesson2') }}  </label>
+            <div class="col-md-6">
+              <input type="number" name="lesson2"  value="{{ getData($data, 'lesson2') }}" class="form-control" placeholder="{{ trans('main.lesson2') }}" >
+                  @if ($errors->has('lesson2'))
+                      <span class="help-block">
+                        <strong class="help-block">{{ $errors->first('lesson2') }}</strong>
+                      </span>
+                  @endif
+            </div>
+      </div>
+
+ <!-- Add الدرس الثالث -->
+<div class="form-group{{ $errors->has('lesson3') ? ' has-error' : '' }}">
+    <label class="col-md-2 control-label">{{ trans('main.lesson3') }}  </label>
+        <div class="col-md-6">
+          <input type="number" name="lesson3"  value="{{ getData($data, 'lesson3') }}" class="form-control" placeholder="{{ trans('main.lesson3') }}" >
+      @if ($errors->has('lesson3'))
+        <span class="help-block">
+           <strong class="help-block">{{ $errors->first('lesson3') }}</strong>
+        </span>
+      @endif
+        </div>
+</div>
+
+ <!-- Add  الدرس الرابع -->
+  <div class="form-group{{ $errors->has('lesson4') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.lesson4') }}  </label>
+            <div class="col-md-6">
+              <input type="number" name="lesson4"  value="{{ getData($data, 'lesson4') }}" class="form-control" placeholder="{{ trans('main.lesson4') }}" >
+                  @if ($errors->has('lesson4'))
+                      <span class="help-block">
+                       <strong class="help-block">{{ $errors->first('lesson4') }}</strong>
+                      </span>
+                  @endif
+            </div>
+  </div>
+
+ <!-- Add الدرس الخامس -->
+   <div class="form-group{{ $errors->has('lesson5') ? ' has-error' : '' }}">
+     <label class="col-md-2 control-label">{{ trans('main.lesson5') }}  </label>
+          <div class="col-md-6">
+            <input type="number" name="lesson5"  value="{{ getData($data, 'lesson5') }}" class="form-control" placeholder="{{ trans('main.lesson5') }}" >
+                @if ($errors->has('lesson5'))
+                  <span class="help-block">
+                    <strong class="help-block">{{ $errors->first('lesson5') }}</strong>
+                    </span>
+                @endif
+          </div>
+    </div>
+
+ <!-- Add الدرس السادس -->
+  <div class="form-group{{ $errors->has('lesson6') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.lesson6') }}  </label>
+            <div class="col-md-6">
+                <input type="number" name="lesson6"  value="{{ getData($data, 'lesson6') }}" class="form-control" placeholder="{{ trans('main.lesson6') }}" >
+                      @if ($errors->has('lesson6'))
+                          <span class="help-block">
+                      <strong class="help-block">{{ $errors->first('lesson6') }}</strong>
+                          </span>
+                      @endif
+            </div>
+  </div>
+
+ <!-- Add الدرس السابع -->
+  <div class="form-group{{ $errors->has('lesson7') ? ' has-error' : '' }}">
+    <label class="col-md-2 control-label">{{ trans('main.lesson7') }}  </label>
+        <div class="col-md-6">
+          <input type="number" name="lesson7"  value="{{ getData($data, 'lesson7') }}" class="form-control" placeholder="{{ trans('main.lesson7') }}" >
+                  @if ($errors->has('lesson7'))
+                      <span class="help-block">
+                          <strong class="help-block">{{ $errors->first('lesson7') }}</strong>
+                      </span>
+                  @endif
+            </div>
+        </div>
+
+<!-- Add الدرس الثامن -->
+    <div class="form-group{{ $errors->has('lesson8') ? ' has-error' : '' }}">
+        <label class="col-md-2 control-label">{{ trans('main.lesson8') }}  </label>
+              <div class="col-md-6">
+              <input type="number" name="lesson8"  value="{{ getData($data, 'lesson8') }}" class="form-control" placeholder="{{ trans('main.lesson8') }}" >
+                    @if ($errors->has('lesson8'))
+                      <span class="help-block">
+                              <strong class="help-block">{{ $errors->first('lesson8') }}</strong>
+                      </span>
+                      @endif
+              </div>
+   </div>
+
+ <!-- Add الدرس التاسع -->
+    <div class="form-group{{ $errors->has('lesson9') ? ' has-error' : '' }}">
+      <label class="col-md-2 control-label">{{ trans('main.lesson9') }}  </label>
+           <div class="col-md-6">
+                <input type="number" name="lesson9"  value="{{ getData($data, 'lesson9') }}" class="form-control" placeholder="{{ trans('main.lesson9') }}" >
+                      @if ($errors->has('lesson9'))
+                            <span class="help-block">
+                                <strong class="help-block">{{ $errors->first('lesson9') }}</strong>
+                            </span>
+                      @endif
+            </div>
+    </div>
+
+ <!-- Add الدرس العاشر -->
+    <div class="form-group{{ $errors->has('lesson10') ? ' has-error' : '' }}">
+      <label class="col-md-2 control-label">{{ trans('main.lesson10') }}  </label>
+            <div class="col-md-6">
+              <input type="number" name="lesson10"  value="{{ getData($data, 'lesson10') }}" class="form-control" placeholder="{{ trans('main.lesson10') }}" >
+                  @if ($errors->has('lesson10'))
+                        <span class="help-block">
+                          <strong class="help-block">{{ $errors->first('lesson10') }}</strong>
+                            </span>
+                                @endif
+              </div>
+      </div>
+
+ <!-- Add كرازة صديق -->
+      <div class="form-group{{ $errors->has('friendmission') ? ' has-error' : '' }}">
+         <label class="col-md-2 control-label">{{ trans('main.friendmission') }}  </label>
+              <div class="col-md-6">
+                  <input type="number" name="friendmission"  value="{{ getData($data, 'friendmission') }}" class="form-control" placeholder="{{ trans('main.friendmission') }}" >
+                        @if ($errors->has('friendmission'))
+                              <span class="help-block">
+                                <strong class="help-block">{{ $errors->first('friendmission') }}</strong>
+                              </span>
+                            @endif
+              </div>
+      </div>
+
+ <!-- Addقرار صديق -->
+            <div class="form-group{{ $errors->has('frienddecision') ? ' has-error' : '' }}">
+               <label class="col-md-2 control-label">{{ trans('main.frienddecision') }}  </label>
+                    <div class="col-md-6">
+                        <input type="number" name="frienddecision"  value="{{ getData($data, 'frienddecision') }}" class="form-control" placeholder="{{ trans('main.frienddecision') }}" >
+                              @if ($errors->has('frienddecision'))
+                                    <span class="help-block">
+                                      <strong class="help-block">{{ $errors->first('frienddecision') }}</strong>
+                                    </span>
+                                  @endif
+                    </div>
+            </div>
+
+ <!-- تدريب صديق -->
+      <div class="form-group{{ $errors->has('friendmissiontrain') ? ' has-error' : '' }}">
+         <label class="col-md-2 control-label">{{ trans('main.friendmissiontrain') }}  </label>
+              <div class="col-md-6">
+                    <input type="number" name="friendmissiontrain"  value="{{ getData($data, 'friendmissiontrain') }}" class="form-control" placeholder="{{ trans('main.friendmissiontrain') }}" >
+                            @if ($errors->has('friendmissiontrain'))
+                                  <span class="help-block">
+                                        <strong class="help-block">{{ $errors->first('friendmissiontrain') }}</strong>
+                                            </span>
+                                          @endif
+              </div>
+    </div>
+
+<!-- تدريب متابعة اصدقاء -->
+          <div class="form-group{{ $errors->has('friendfollowtrain') ? ' has-error' : '' }}">
+             <label class="col-md-2 control-label">{{ trans('main.friendfollowtrain') }}  </label>
+                  <div class="col-md-6">
+                        <input type="number" name="friendfollowtrain"  value="{{ getData($data, 'friendfollowtrain') }}" class="form-control" placeholder="{{ trans('main.friendfollowtrain') }}" >
+                                @if ($errors->has('friendfollowtrain'))
+                                      <span class="help-block">
+                                            <strong class="help-block">{{ $errors->first('friendfollowtrain') }}</strong>
+                                                </span>
+                                              @endif
+                  </div>
+        </div>
 </div>

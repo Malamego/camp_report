@@ -60,8 +60,9 @@ class Sheet2statisticsController extends Controller
         }
 
         $requestAll = $request->all();
-
+        if ($request->file('image')) {
         $requestAll['image'] = Helper::Upload('sheet2statistics', $request->file('image'), 'checkImages');
+      }
         $sheet2statis = Sheet2statistic::create($requestAll);
 
         session()->flash('success', trans('main.added-message'));

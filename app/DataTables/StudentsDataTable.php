@@ -29,7 +29,7 @@ class StudentsDataTable extends DataTable
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\ClassModel $model
+     * @param \App\Models\Student $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function query()

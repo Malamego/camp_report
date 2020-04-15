@@ -54,17 +54,12 @@ class Statistics4dsController extends Controller
      */
     public function store(Statistics4dsRequest $request)
     {
-        // To Make Sure my order doesn't duplicate..
         $requestAll = $request->all();
 
-        // if (Statisticds::where('datenow', $request->datenow)->exists()) {
-        //     session()->flash('error', trans('main.duplicate_datenow'));
-        //     return redirect()->back();
-        // }
-        // $requestAll = $request->all();
+        if ($request->file('image')) {
+          $requestAll['image'] = Helper::Upload('statistics4ds', $request->file('image'), 'checkImages');
+        }
 
-
-        $requestAll['image'] = Helper::Upload('statistics4ds', $request->file('image'), 'checkImages');
 
         $statis = Statistic4ds::create($requestAll);
 
@@ -96,8 +91,8 @@ class Statistics4dsController extends Controller
     public function edit($id)
     {
         $statis = Statistic4ds::findOrFail($id);
-        $we    = Week::all();
-        $st    = Student::all();
+        $we     = Week::all();
+        $st     = Student::all();
         $tool   = Tool::all();
         return view("{$this->viewPath}.edit", [
             'title' => trans('main.edit') . ' ' . trans('main.statis') . ' : ' . $statis->name,
@@ -118,11 +113,6 @@ class Statistics4dsController extends Controller
     public function update(Statistics4dsRequest $request, $id)
     {
         $statis = Statistic4ds::find($id);
-
-        // if (Statistic4ds::where('id', '!=', $id)->where('course_id', $request->course_id)->where('myorder', $request->myorder)->exists()) {
-        //     session()->flash('error', trans('main.ordernumber'));
-        //     return redirect()->back();
-        // }
 
         $statis->title            = $request->title;
         $statis->week_id          = $request->week_id;
@@ -149,6 +139,24 @@ class Statistics4dsController extends Controller
         $statis->status           = $request->status;
         $statis->image            = $request->image;
         $statis->content          = $request->content;
+        $statis->incarnation      = $request->incarnation;
+        $statis->steel            = $request->steel;
+        $statis->misrepresentation = $request->misrepresentation;
+        $statis->biblestory       = $request->biblestory;
+        $statis->lesson1          = $request->lesson1;
+        $statis->lesson2          = $request->lesson2;
+        $statis->lesson3          = $request->lesson3;
+        $statis->lesson4          = $request->lesson4;
+        $statis->lesson5          = $request->lesson5;
+        $statis->lesson6          = $request->lesson6;
+        $statis->lesson7          = $request->lesson7;
+        $statis->lesson8          = $request->lesson8;
+        $statis->lesson9          = $request->lesson9;
+        $statis->lesson10         = $request->lesson10;
+        $statis->friendmission    = $request->friendmission;
+        $statis->frienddecision   = $request->frienddecision;
+        $statis->friendmissiontrain   = $request->friendmissiontrain;
+        $statis->loven            = $request->loven;
 
         if ($request->hasFile('image')) {
             $statis->image = Helper::UploadUpdate($statis->image ?? null, 'statistics4ds', $request->file('image'), 'checkImages');

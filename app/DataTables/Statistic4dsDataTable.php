@@ -35,7 +35,7 @@ class Statistic4dsDataTable extends DataTable
      */
     public function query()
     {
-        $query = Statistic4ds::query()->select('statistic4ds.*');
+        $query = Statistic4ds::query()->with('studentds_relation')->select('statistic4ds.*');
         return $this->applyScopes($query);
     }
 
@@ -49,7 +49,7 @@ class Statistic4dsDataTable extends DataTable
         $html =  $this->builder()
         ->columns($this->getColumns())
         ->ajax('')
-        ->parameters($this->getCustomBuilderParameters([1], [], GetLanguage() == 'ar'));
+        ->parameters($this->getCustomBuilderParameters([1,2], [], GetLanguage() == 'ar'));
 
         return $html;
     }
@@ -77,6 +77,14 @@ class Statistic4dsDataTable extends DataTable
                 'name' => "statistic4ds.title",
                 'data'    => 'title',
                 'title'   => trans('main.title'),
+                'searchable' => true,
+                'orderable'  => true,
+                'width'          => '200px',
+            ],
+            [
+                'name' => "studentds_relation.name",
+                'data'    => 'studentds_relation.name',
+                'title'   => trans('main.teacher'),
                 'searchable' => true,
                 'orderable'  => true,
                 'width'          => '200px',
