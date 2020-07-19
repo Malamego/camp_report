@@ -13,6 +13,7 @@ class CreateStudentsTable extends Migration
      */
     public function up()
     {
+       Schema::disableForeignKeyConstraints(); // For Forgen Key Checks Disable
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
@@ -52,6 +53,7 @@ class CreateStudentsTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        Schema::enableForeignKeyConstraints(); // For Forgen Key Checks Enable
     }
 
     /**

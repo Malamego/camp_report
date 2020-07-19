@@ -832,5 +832,15 @@ return [
     'friendmissiontrain'              => 'Friend Missiontrain',
     'friendfollowtrain'               => 'Friend Observation Training',
     'statistics4college'              => 'Statistics 4 College',
+    'friendfollow'                    => 'Friend Follow',
+    'talmazagroup'                    => 'Talmaza Group',
+    'missionhours'                    => 'Mission Hours',
+    'jesustime'                       => 'Jesus Time',
+    'traininteract'                   => 'Interact in Train',
+    'church'                          => 'Church',
+    'presence'                        => 'Presence',
+    'absence'                         => 'Absence',
+    'statis4prof'                     => 'Statis4prof',
+    
 
 ];

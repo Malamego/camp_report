@@ -54,7 +54,7 @@ class StudentsController extends Controller
 
         if ($request->file('image')) {
           $requestAll['image'] = Helper::Upload('users', $request->file('image'), 'checkImages');
-        }
+        }      
         $student = Student::create($requestAll);
 
         session()->flash('success', trans('main.added-message'));

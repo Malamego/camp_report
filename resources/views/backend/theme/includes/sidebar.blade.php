@@ -106,6 +106,29 @@
                      </li>
                  </ul>
              </li>
+
+             <!-- statistics for PROF -->
+                          <li class="nav-item  {{ active_route('statistics4prof.*') }}">
+                              <a href="javascript:;" class="nav-link nav-toggle">
+                                  <i class="icon-users"></i>
+                                  <span class="title">{{ trans('main.statis4prof') }}</span>
+                                  <span class="arrow"></span>
+                              </a>
+                              <ul class="sub-menu">
+                                  <li class="nav-item {{ active_route('statistics4prof.create') }}">
+                                      <a href="{{ route('statistics4prof.create') }}" class="nav-link ">
+                                          <span class="title">{{ trans('main.add') }} {{ trans('main.statis4prof') }}</span>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item {{ active_route('statistics4prof.index') }}">
+                                      <a href="{{ route('statistics4prof.index') }}" class="nav-link ">
+                                          <span class="title">{{ trans('main.show-all') }} {{ trans('main.statis4prof') }}</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+
+
  <!-- Add statistics for sheet1 for Coo -->
              <li class="nav-item  {{ active_route('statistics.*') }}">
                  <a href="javascript:;" class="nav-link nav-toggle">

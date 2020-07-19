@@ -40,6 +40,10 @@ Route::middleware(\App\Http\Middleware\LangMiddleware::class)->group(function ()
     Route::resource('statistics4ds', 'Statistics4dsController');
     Route::post('statistics4ds/multi_delete', 'Statistics4dsController@multi_delete')->name('statistics4ds.multi_delete');
 
+    // statistics4PROF
+    Route::resource('statistics4prof', 'Statistics4profController');
+    Route::post('statistics4prof/multi_delete', 'Statistics4profController@multi_delete')->name('statistics4prof.multi_delete');
+
 
     // classes
     Route::resource('classes', 'ClassesController');

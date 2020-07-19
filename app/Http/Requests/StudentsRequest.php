@@ -36,7 +36,7 @@ class StudentsRequest extends FormRequest
         ];
 
         if (in_array($this->method(), ['POST', 'PATCH'])) {
-            $return['email'] = 'required|unique:students,phone,'.$this->route()->parameter('student').',id';
+            $return['email'] = 'required|unique:students,email,'.$this->route()->parameter('student').',id';
             $return['phone'] = 'required|unique:students,phone,'.$this->route()->parameter('student').',id';
         }
 
